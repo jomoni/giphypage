@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <title>giphysearch</title>
+    <title>GiphySearch</title>
     <link rel='stylesheet' href='styles/bootstrap.min.css' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel='stylesheet' href='styles/style.css' />-->
@@ -14,11 +14,18 @@
     <h1>Welcome to GiphySearch!</h1>
 
     <!--  Search Form  -->
-    <form action="" method="POST" class="form-horizontal" role="form"  onsubmit="yourJsFunction();return false">
+    <form action="" method="POST" class="form-horizontal" role="form"  onsubmit="giphyApiCall();return false">
         <div class="form-group row ">
             <label for="giphy-search" class="control-label col-md-2 form-label">Search Giphy:</label>
             <div class="col-md-6">
                 <input type="text" name="giphy-search" id="giphy-search" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group row ">
+            <label for="giphy-count" class="control-label col-md-2 form-label">Max Number of GIFs:</label>
+            <div class="col-md-6">
+                <input type="text" name="giphy-count" id="giphy-count" class="form-control " value="10"/>
             </div>
         </div>
 
@@ -32,13 +39,29 @@
 
     <br />
     <h2 id='test-output'></h2>
+    <h2 id='string-output'></h2>
 
     <script src='scripts/jquery-3.5.1.min.js'></script>
     <script src='scripts/bootstrap.min.js'></script>
     <script>
-        function yourJsFunction(){ 
-            document.getElementById('test-output').innerHTML = 'User Searched for: ' + document.getElementById("giphy-search").value;
-            
+        function giphyApiCall(){ 
+            var API_KEY = "k1XcwGYVTYdpcL5CKkAuKVwgWo5Tkclp&limit";
+            var search_string = document.getElementById("giphy-search").value
+            search_string.replace(/  +/g, '!!') 
+            search_limit = document.getElementById("giphy-count").value;
+
+            var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + search_string.replace(' ', '+')+ "&api_key=" + API_KEY + "=" + search_limit, function(data) {
+                document.getElementById('test-output').innerHTML = 'User Searched for: ' + search_string.replace(' ', '+');
+                
+                
+                var i;
+                for (i = 0; i < data.data.length; i++) {
+                    var imgstr = '<img src = "' + data.data[i].images.original.url +  '" alt = "test" id="o3" />'
+                    $('#test-output').before(imgstr)
+                }
+                
+            });
+            xhr.done(function(data) { console.log("success got data", data); });
             };
         </script>
 </body>
