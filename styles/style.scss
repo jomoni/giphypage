@@ -1,0 +1,26 @@
+$brandColorPrimary:red;
+$brandColorSeconday:  red;
+$brandPadding: 12px;
+@mixin standardPadding($value) {
+    padding: $value;
+}
+body {
+
+    background-color: black;
+    color: white;
+
+    header {
+        color: $brandColorSeconday;
+    }
+    footer {
+        color: $brandColorPrimary;
+    }
+    h1 {
+        color: $brandColorSeconday;
+    }
+    p {
+        @include standardPadding($brandPadding);
+        background-color: $brandColorSeconday;
+        color: #FFFFFF;
+    }
+}
