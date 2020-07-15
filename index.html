@@ -1,0 +1,46 @@
+<!-- API Key: k1XcwGYVTYdpcL5CKkAuKVwgWo5Tkclp -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>giphysearch</title>
+    <link rel='stylesheet' href='styles/bootstrap.min.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel='stylesheet' href='styles/style.css' />-->
+</head>
+
+<body>
+    <h1>Welcome to GiphySearch!</h1>
+
+    <!--  Search Form  -->
+    <form action="" method="POST" class="form-horizontal" role="form"  onsubmit="yourJsFunction();return false">
+        <div class="form-group row ">
+            <label for="giphy-search" class="control-label col-md-2 form-label">Search Giphy:</label>
+            <div class="col-md-6">
+                <input type="text" name="giphy-search" id="giphy-search" class="form-control" />
+            </div>
+        </div>
+
+        <!--   Submit Button  -->
+        <div class="form-group row">
+            <div class="col-md-8 col-md-offset-10 form-label">
+                <button type="submit" id="giphy-btn" class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <br />
+    <h2 id='test-output'></h2>
+
+    <script src='scripts/jquery-3.5.1.min.js'></script>
+    <script src='scripts/bootstrap.min.js'></script>
+    <script>
+        function yourJsFunction(){ 
+            document.getElementById('test-output').innerHTML = 'User Searched for: ' + document.getElementById("giphy-search").value;
+            
+            };
+        </script>
+</body>
+
+</html>
