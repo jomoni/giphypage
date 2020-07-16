@@ -2,12 +2,15 @@ body {
   background-color: black;
   color: white; }
   body header {
-    color: red; }
+    color: red;
+    background-color: black;
+    min-height: 200px;
+    text-align: center; }
   body footer {
-    color: red; }
+    color: red;
+    background-color: black;
+    text-align: right; }
   body h1 {
     color: red; }
-  body p {
-    padding: 12px;
-    background-color: red;
-    color: #FFFFFF; }
+  body .gif-container {
+    background-color: #A9A9A9; }

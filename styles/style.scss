@@ -1,26 +1,33 @@
 $brandColorPrimary:red;
 $brandColorSeconday:  red;
+$headerFooterColor: black;
+$backgroundColor: #A9A9A9;
+$fontColor: white;
 $brandPadding: 12px;
 @mixin standardPadding($value) {
     padding: $value;
 }
 body {
 
-    background-color: black;
-    color: white;
+    background-color: $headerFooterColor;
+    color: $fontColor;
 
     header {
         color: $brandColorSeconday;
+        background-color: $headerFooterColor;
+        min-height: 200px;
+        text-align: center;
     }
     footer {
         color: $brandColorPrimary;
+        background-color: $headerFooterColor;
+        text-align: right;
     }
     h1 {
         color: $brandColorSeconday;
     }
-    p {
-        @include standardPadding($brandPadding);
-        background-color: $brandColorSeconday;
-        color: #FFFFFF;
+    .gif-container {
+        background-color: $backgroundColor;
     }
+
 }
