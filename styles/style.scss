@@ -7,7 +7,46 @@ $brandPadding: 12px;
 @mixin standardPadding($value) {
     padding: $value;
 }
-body {
+
+.title {
+    text-align: left;
+    float: left;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #1E2330
+  }
+  
+  #navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+
+    .content {
+         padding: 16px;
+     }
+  
+     .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  
+     .sticky + .content {
+        padding-top: 60px;
+    }
+
+     #currentPage {
+          background-color:red;
+    }
+
+    body {
 
     background-color: $headerFooterColor;
     color: $fontColor;
@@ -18,11 +57,18 @@ body {
         min-height: 200px;
         text-align: center;
     }
+
     footer {
         color: $brandColorPrimary;
         background-color: $headerFooterColor;
         text-align: right;
+        display: none;
     }
+
+    .footer-visible {
+        display:block;
+    }
+
     h1 {
         color: $brandColorSeconday;
     }
@@ -30,4 +76,5 @@ body {
         background-color: $backgroundColor;
     }
 
-}
+} //body
+

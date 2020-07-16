@@ -1,5 +1,3 @@
-<!-- API Key: k1XcwGYVTYdpcL5CKkAuKVwgWo5Tkclp -->
-
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +9,14 @@
 </head>
 
 <body>
+
+    <div id="navbar">
+        <h2 class="title">GiphySearch</h2>
+        <a href="index.html">About</a>
+        <a href="index.html">Contact</a>
+        <a href="index.html" id="currentPage">Search</a>
+    </div>
+
     <header>
     <h1>Welcome to GiphySearch!</h1>
     </header>
@@ -67,8 +73,10 @@
                 
             });
             xhr.done(function(data) { console.log("success got data", data); });
+            $('footer').addClass('footer-visible')
             };
         </script>
+        <script type="text/javascript" src="scripts/stickynav.js"></script>
 </body>
 
 </html>
