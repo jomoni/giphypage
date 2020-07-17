@@ -9,14 +9,14 @@
 </head>
 
 <body>
-
+    <div >
     <div id="navbar">
         <h2 class="title">GiphySearch</h2>
         <a href="index.html">About</a>
         <a href="index.html">Contact</a>
         <a href="index.html" id="currentPage">Search</a>
     </div>
-
+</div>
     <header>
     <h1>Welcome to GiphySearch!</h1>
     </header>
@@ -63,12 +63,12 @@
 
             var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=" + search_string.replace(' ', '+')+ "&api_key=" + API_KEY + "=" + search_limit, function(data) {
                 document.getElementById('test-output').innerHTML = 'User Searched for: ' + search_string.replace(' ', '+');
-                
-                
+
+                $('#test-output').before('<div class="flex-container">')     
                 var i;
                 for (i = 0; i < data.data.length; i++) {
-                    var imgstr = '<img src = "' + data.data[i].images.original.url +  '" alt = "test" id="o3" />'
-                    $('#test-output').before(imgstr)
+                    var imgstr = '<div><img src = "' + data.data[i].images.original.url +  '"  alt = "test" id="o3" /></div>'
+                    $(".flex-container").append(imgstr)
                 }
                 
             });
@@ -76,7 +76,7 @@
             $('footer').addClass('footer-visible')
             };
         </script>
-        <script type="text/javascript" src="scripts/stickynav.js"></script>
+       <!-- <script type="text/javascript" src="scripts/stickynav.js"></script>-->
 </body>
 
 </html>

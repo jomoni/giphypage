@@ -31,11 +31,13 @@
 
 body {
   background-color: black;
-  color: white; }
+  color: white;
+  margin-left: 40px;
+  margin-right: 40px; }
   body header {
     color: red;
     background-color: black;
-    min-height: 200px;
+    min-height: 100px;
     text-align: center; }
   body footer {
     color: red;
@@ -48,3 +50,20 @@ body {
     color: red; }
   body .gif-container {
     background-color: #A9A9A9; }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.flex-container > div {
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px; }
+
+.flex-container > div > img {
+  height: 200px;
+  width: 200px; }
