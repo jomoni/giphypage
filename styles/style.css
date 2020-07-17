@@ -5,10 +5,10 @@ body {
   margin-right: 40px; }
   body .title {
     text-align: left;
-    float: left; }
+    float: left;
+    padding: 10px; }
   body #navbar {
-    overflow: hidden;
-    background-color: #1E2330; }
+    overflow: hidden; }
   body #navbar a {
     float: right;
     display: block;
@@ -42,7 +42,7 @@ body {
   body h1 {
     color: red; }
   body .gif-container {
-    background-color: #A9A9A9; }
+    background-color: #484848; }
 
 .flex-container {
   display: flex;
@@ -71,6 +71,20 @@ body {
 .flex-container > div > img {
   height: 200px;
   width: 200px; }
+
+.flex-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.flex-title > div#page-title {
+  width: 50%;
+  justify-content: flex-start; }
+
+.flex-title > div#navbar {
+  width: 50%;
+  justify-content: flex-end; }
 
 .blueBorder {
   border: 3px solid blue; }

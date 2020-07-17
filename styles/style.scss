@@ -1,14 +1,12 @@
 $brandColorPrimary:red;
 $brandColorSeconday:  red;
 $headerFooterColor: black;
-$backgroundColor: #A9A9A9;
+$backgroundColor: #484848;
 $fontColor: white;
 $brandPadding: 12px;
 @mixin standardPadding($value) {
     padding: $value;
 }
-
-
     body {
 
     background-color: $headerFooterColor;
@@ -20,13 +18,13 @@ $brandPadding: 12px;
     .title {
         text-align: left;
         float: left;
+        padding:10px;
     }
     
     #navbar {
         overflow: hidden;
-        background-color: #1E2330
       }
-      
+
       #navbar a {
         float: right;
         display: block;
@@ -117,6 +115,22 @@ $brandPadding: 12px;
     width: 200px;
   }
 
+  .flex-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .flex-title > div#page-title {
+    width: 50%;
+    justify-content: flex-start;
+  }
+
+  .flex-title > div#navbar {
+    width: 50%;
+    justify-content: flex-end;
+  }
 
   .blueBorder {
     border: 3px solid blue;
