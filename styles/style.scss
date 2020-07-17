@@ -32,6 +32,7 @@ $brandPadding: 12px;
         text-align: center;
         padding: 14px;
         text-decoration: none;
+        border: 3px solid red;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
     
@@ -58,6 +59,7 @@ $brandPadding: 12px;
         background-color: $headerFooterColor;
         min-height: 100px;
         text-align: center;
+        margin-top: 20px;
     }
 
     footer {
@@ -91,7 +93,6 @@ $brandPadding: 12px;
     display: flex;
     text-align: left;
     justify-content: center;
-
   }
 
   .flex-form > div {
@@ -124,7 +125,6 @@ $brandPadding: 12px;
   
   .flex-title > div#page-title {
     width: 50%;
-    justify-content: flex-start;
   }
 
   .flex-title > div#navbar {
@@ -133,6 +133,72 @@ $brandPadding: 12px;
   }
 
   .blueBorder {
-    border: 3px solid blue;
+    border: 3px solid blue; 
 }
  
+@media only screen and (max-width: 600px) {
+    .flex-title {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .title {   
+        width: 100%;
+        float: right;
+        text-align: center;
+      }
+
+      .flex-title > div#navbar {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .flex-title > div#navbar > a {
+        width: 100%;
+        text-align: center;
+      }
+
+      header {
+        display: none;
+      }
+
+      .flex-form {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    
+      }
+    
+      .flex-form > div {
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+
+        width: 50%;
+      }
+
+      .flex-form > div > button{
+        margin-top: 0px;
+      }
+
+      .flex-container > div {
+        width: 100%;
+        margin: 10px;
+        justify-content: center;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      footer {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      footer > h1 {
+        text-align: center;
+      }
+
+    }
