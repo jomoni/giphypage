@@ -2,7 +2,8 @@ body {
   background-color: black;
   color: white;
   margin-left: 40px;
-  margin-right: 40px; }
+  margin-right: 40px;
+  font-family: 'Ranchers', cursive; }
   body .title {
     text-align: left;
     float: left;
