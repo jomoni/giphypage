@@ -1,39 +1,32 @@
-.title {
-  text-align: left;
-  float: left; }
-
-#navbar {
-  overflow: hidden;
-  background-color: #1E2330; }
-
-#navbar a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
-
-.content {
-  padding: 16px; }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%; }
-
-.sticky + .content {
-  padding-top: 60px; }
-
-#currentPage {
-  background-color: red; }
-
 body {
   background-color: black;
   color: white;
   margin-left: 40px;
   margin-right: 40px; }
+  body .title {
+    text-align: left;
+    float: left; }
+  body #navbar {
+    overflow: hidden;
+    background-color: #1E2330; }
+  body #navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
+  body .content {
+    padding: 16px; }
+  body .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+  body .sticky + .content {
+    padding-top: 60px; }
+  body #currentPage {
+    background-color: red; }
   body header {
     color: red;
     background-color: black;
@@ -57,6 +50,14 @@ body {
   flex-wrap: wrap;
   text-align: center; }
 
+.flex-form {
+  display: flex;
+  text-align: left;
+  justify-content: center; }
+
+.flex-form > div {
+  margin: 20px; }
+
 .flex-container > div {
   width: 200px;
   margin: 10px;
@@ -64,6 +65,12 @@ body {
   line-height: 75px;
   font-size: 30px; }
 
+.flex-form > div > button {
+  margin-top: 31px; }
+
 .flex-container > div > img {
   height: 200px;
   width: 200px; }
+
+.blueBorder {
+  border: 3px solid blue; }
