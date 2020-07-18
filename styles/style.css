@@ -21,12 +21,6 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; }
   body .content {
     padding: 16px; }
-  body .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%; }
-  body .sticky + .content {
-    padding-top: 60px; }
   body #currentPage {
     background-color: red; }
   body header {
