@@ -1,3 +1,9 @@
+//Morgan Nicholson
+//Web Dev Bootcamp Project 2
+//7/17/2020
+
+
+//variables
 $brandColorPrimary:red;
 $brandColorSeconday:  red;
 $headerFooterColor: black;
@@ -32,7 +38,7 @@ $brandPadding: 12px;
         text-align: center;
         padding: 14px;
         text-decoration: none;
-        border: 3px solid red;
+        border: 3px solid $brandColorSeconday;
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
     
@@ -82,6 +88,8 @@ $brandPadding: 12px;
 
 } //body
 
+
+//flex boxes
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -135,7 +143,9 @@ $brandPadding: 12px;
   .blueBorder {
     border: 3px solid blue; 
 }
- 
+
+
+//media query for 320px screen size
 @media only screen and (max-width: 320px) {
     .flex-title {
         width: 100%;
